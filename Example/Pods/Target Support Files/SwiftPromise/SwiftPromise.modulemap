@@ -1,0 +1,6 @@
+framework module SwiftPromise {
+  umbrella header "SwiftPromise-umbrella.h"
+
+  export *
+  module * { export * }
+}

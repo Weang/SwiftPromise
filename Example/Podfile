@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftPromise_Example' do
+  pod 'SwiftPromise', :path => '../'
+
+  target 'SwiftPromise_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
