@@ -1,5 +1,4 @@
 import XCTest
-import SwiftPromise
 
 class Tests: XCTestCase {
     

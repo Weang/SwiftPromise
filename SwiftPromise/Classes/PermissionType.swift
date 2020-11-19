@@ -14,11 +14,12 @@ public enum PermissionType {
     case contacts
     case locationInUse
     case locationAlways
+    case notification
 }
 
 extension PermissionType {
     
-    public var infoDescription: String {
+    public var infoDescription: String? {
         switch self {
         case .microphone: return "NSMicrophoneUsageDescription"
         case .photoLibrary: return "NSPhotoLibraryUsageDescription"
@@ -26,6 +27,7 @@ extension PermissionType {
         case .contacts: return "NSContactsUsageDescription"
         case .locationInUse: return "NSLocationWhenInUseUsageDescription"
         case .locationAlways: return "NSLocationAlwaysAndWhenInUseUsageDescription"
+        case .notification: return nil
         }
     }
     
@@ -37,6 +39,7 @@ extension PermissionType {
         case .contacts: return "通讯录"
         case .locationInUse: return "定位"
         case .locationAlways: return "定位"
+        case .notification: return "推送"
         }
     }
     
@@ -48,6 +51,7 @@ extension PermissionType {
         case .contacts: return Contacts.self
         case .locationInUse: return LocationInUse.self
         case .locationAlways: return LocationAlways.self
+        case .notification: return Notification.self
         }
     }
     
