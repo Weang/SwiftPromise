@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TaskQueue
 
 public struct PermissionProvider {
     
@@ -23,34 +24,63 @@ public struct PermissionProvider {
             fatalError("请在info.plist中添加\(infoDescription)")
         }
         
+        func completeHandle() {
+            DispatchQueue.main.async {
+                complete()
+            }
+        }
+        
+        func failureHandle() {
+            DispatchQueue.main.async {
+                if let alertDelegate = alertDelegate {
+                    alertDelegate.showAlert(type, status: type.permission.status) {
+                        failure()
+                    }
+                } else {
+                    failure()
+                }
+            }
+        }
+        
         switch type.permission.status {
         case .authorized:
-            complete()
+            completeHandle()
         case .notDetermined:
-            type.permission.requestPermission { _ in
-                DispatchQueue.main.async {
-                    switch type.permission.status {
-                    case .authorized:
-                        complete()
-                    default:
-                        if let alertDelegate = alertDelegate {
-                            alertDelegate.showAlert(type, status: type.permission.status) {
-                                failure()
-                            }
-                        } else {
-                            failure()
-                        }
-                    }
+            type.permission.requestPermission { status in
+                switch status {
+                case .authorized:
+                    completeHandle()
+                default:
+                    failureHandle()
                 }
             }
         default:
-            if let alertDelegate = alertDelegate {
-                alertDelegate.showAlert(type, status: type.permission.status) {
+            failureHandle()
+        }
+        
+    }
+    
+    public static func request(_ types: [PermissionType],
+                               alertDelegate: PermissionAlert? = PermissionDefaultAlert(),
+                               complete: @escaping () -> () = {},
+                               failure: @escaping () -> () = {}) {
+        let queue = TaskQueue()
+        
+        queue.tasks = types.map { type -> TaskQueue.ClosureWithResultNext in
+            return { _, next in
+                request(type, alertDelegate: alertDelegate) {
+                    next(nil)
+                } failure: {
                     failure()
+                    queue.removeAll()
                 }
-            } else {
-                failure()
+            }
+        }
+        queue.run {
+            DispatchQueue.main.async {
+                complete()
             }
         }
     }
+    
 }

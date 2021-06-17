@@ -6,6 +6,5 @@ target 'SwiftPromise_Example' do
   target 'SwiftPromise_Tests' do
     inherit! :search_paths
 
-    
   end
 end

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftPromise'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A short description of SwiftPromise.'
 
 # This description is used to generate tags and improve search results.
@@ -26,8 +26,10 @@ TODO: Add long description of the pod here.
   s.author           = { 'w704444178@qq.com' => 'w704444178@qq.com' }
   s.source           = { :git => 'https://github.com/Weang/SwiftPromise.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SwiftPromise/Classes/**/*'
   s.swift_versions = '5.0'
+  s.dependency "TaskQueue"
+  
 end

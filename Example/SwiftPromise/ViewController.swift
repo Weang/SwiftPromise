@@ -8,21 +8,21 @@
 
 import UIKit
 import SwiftPromise
+import TaskQueue
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        PermissionProvider.request(.notification) {
-            
+        print("touchesBegan")
+        PermissionProvider.request([.camera, .contacts, .microphone, .notification]) {
+            print("complete")
         } failure: {
-            
+            print("failure")
         }
     }
 
 }
-

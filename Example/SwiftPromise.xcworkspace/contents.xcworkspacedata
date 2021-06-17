@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SwiftPromise.xcodeproj">
+      location = "group:/Users/mr.wang/Documents/Cocoapods/SwiftPromise/Example/SwiftPromise.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

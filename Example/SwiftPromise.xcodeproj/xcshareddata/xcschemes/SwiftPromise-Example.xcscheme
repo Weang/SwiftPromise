@@ -17,7 +17,7 @@
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x997f;.app"
                BlueprintName = "SwiftPromise_Example"
-               ReferencedContainer = "container:SwiftPromise.xcodeproj">
+               ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "SwiftPromise_Tests.xctest"
                BlueprintName = "SwiftPromise_Tests"
-               ReferencedContainer = "container:SwiftPromise.xcodeproj">
+               ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x997f;.app"
             BlueprintName = "SwiftPromise_Example"
-            ReferencedContainer = "container:SwiftPromise.xcodeproj">
+            ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,7 +58,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "SwiftPromise_Tests.xctest"
                BlueprintName = "SwiftPromise_Tests"
-               ReferencedContainer = "container:SwiftPromise.xcodeproj">
+               ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -80,7 +80,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x997f;.app"
             BlueprintName = "SwiftPromise_Example"
-            ReferencedContainer = "container:SwiftPromise.xcodeproj">
+            ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x8bf7;&#x95ee;&#x997f;.app"
             BlueprintName = "SwiftPromise_Example"
-            ReferencedContainer = "container:SwiftPromise.xcodeproj">
+            ReferencedContainer = "container:SwiftPromise_Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

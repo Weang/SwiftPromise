@@ -32,7 +32,7 @@
 		35E5407B13E8903DD955472E /* Pods-SwiftPromise_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPromise_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPromise_Example/Pods-SwiftPromise_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3FF6E34C281EAECE7AD61616 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5C3C1ED7C4703FF25FB7CE80 /* Pods_SwiftPromise_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPromise_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* 请问请问请问请问饿.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "请问请问请问请问饿.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* SwiftPromise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPromise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* 请问请问请问请问饿.app */,
+				607FACD01AFB9204008FA782 /* SwiftPromise.app */,
 				607FACE51AFB9204008FA782 /* SwiftPromise_Tests.xctest */,
 			);
 			name = Products;
@@ -178,7 +178,7 @@
 			);
 			name = SwiftPromise_Example;
 			productName = SwiftPromise;
-			productReference = 607FACD01AFB9204008FA782 /* 请问请问请问请问饿.app */;
+			productReference = 607FACD01AFB9204008FA782 /* SwiftPromise.app */;
 			productType = "com.apple.product-type.application";
 		};
 		607FACE41AFB9204008FA782 /* SwiftPromise_Tests */ = {
@@ -292,10 +292,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftPromise_Example/Pods-SwiftPromise_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftPromise/SwiftPromise.framework",
+				"${BUILT_PRODUCTS_DIR}/TaskQueue/TaskQueue.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPromise.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TaskQueue.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,12 +480,15 @@
 			baseConfigurationReference = 35E5407B13E8903DD955472E /* Pods-SwiftPromise_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBC_MODULE = SwiftPromise_Demo;
+				IBSC_MODULE = SwiftPromise_Demo;
 				INFOPLIST_FILE = SwiftPromise/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.promise.test;
-				PRODUCT_NAME = "请问请问请问请问饿";
+				PRODUCT_BUNDLE_IDENTIFIER = com.promise.testf;
+				PRODUCT_MODULE_NAME = SwiftPromise_Demo;
+				PRODUCT_NAME = SwiftPromise;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -494,12 +499,15 @@
 			baseConfigurationReference = C505920B5673C24B365FC184 /* Pods-SwiftPromise_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBC_MODULE = SwiftPromise_Demo;
+				IBSC_MODULE = SwiftPromise_Demo;
 				INFOPLIST_FILE = SwiftPromise/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.promise.test;
-				PRODUCT_NAME = "请问请问请问请问饿";
+				PRODUCT_BUNDLE_IDENTIFIER = com.promise.testf;
+				PRODUCT_MODULE_NAME = SwiftPromise_Demo;
+				PRODUCT_NAME = SwiftPromise;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
